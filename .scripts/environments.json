@@ -1,0 +1,14 @@
+{
+  "Dev": {
+    "Name": "Development",
+    "ConnectionString": "Host=***.supabase.com;Database=***;Username=***;Password=***"
+  },
+  "Stg": {
+    "Name": "Staging",
+    "ConnectionString": "Host=***.supabase.com;Database=***;Username=***;Password=***"
+  },
+  "Prd": {
+    "Name": "Production",
+    "ConnectionString": "Host=***.supabase.com;Database=***;Username=***;Password=***"
+  }
+}
