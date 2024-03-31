@@ -6,7 +6,14 @@ public static class TestDatabaseFactory
     {
         var database = new TestcontainersTestDatabase();
 
-        await database.InitialiseAsync();
+        try
+        {
+            await database.InitialiseAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
 
         return database;
     }

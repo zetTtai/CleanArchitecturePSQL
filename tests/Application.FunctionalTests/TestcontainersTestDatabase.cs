@@ -11,7 +11,7 @@ namespace CleanArchitecturePSQL.Application.FunctionalTests;
 public class TestcontainersTestDatabase : ITestDatabase
 {
     private readonly PostgreSqlContainer _container;
-    private DbConnection _connection = null!;
+    private NpgsqlConnection _connection = null!;
     private string _connectionString = null!;
     private Respawner _respawner = null!;
 
@@ -37,9 +37,9 @@ public class TestcontainersTestDatabase : ITestDatabase
 
         var context = new ApplicationDbContext(options);
 
-        context.Database.Migrate();
+        await context.Database.MigrateAsync();
 
-        _respawner = await Respawner.CreateAsync(_connectionString, new RespawnerOptions
+        _respawner = await Respawner.CreateAsync(_connection, new RespawnerOptions
         {
             DbAdapter = DbAdapter.Postgres,
             SchemasToInclude = ["public"],
