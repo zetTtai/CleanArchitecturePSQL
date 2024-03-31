@@ -38,8 +38,6 @@ jobs:
          template: ./.azure/bicep/main.bicep
          parameters: >
            environmentName=${{ inputs.environmentName }}
-           sqlAdministratorUsername=${{ vars.AZURE_SQL_ADMINISTRATOR_USERNAME }}
-           sqlAdministratorPassword=${{ secrets.AZURE_SQL_ADMINISTRATOR_PASSWORD }}
            projectName=${{ vars.PROJECT_NAME }}
          deploymentMode: Validate
 
@@ -52,8 +50,6 @@ jobs:
          template: ./.azure/bicep/main.bicep
          parameters: >
            environmentName=${{ inputs.environmentName }}
-           sqlAdministratorUsername=${{ vars.AZURE_SQL_ADMINISTRATOR_USERNAME }}
-           sqlAdministratorPassword=${{ secrets.AZURE_SQL_ADMINISTRATOR_PASSWORD }}
            projectName=${{ vars.PROJECT_NAME }}
          additionalArguments: --what-if
  
