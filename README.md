@@ -415,11 +415,11 @@ az login --use-device-code
 
 ### What is the difference between the original?
 
-These changes make it easier to create free tier app services. An environment variable named **"APPSETTING_CONNECTION_STRING"** is introduced, containing the connection string relevant to the current environment.
+These changes make it easier to create free tier app services. An environment variable named `APPSETTING_CONNECTION_STRING` is introduced, containing the connection string relevant to the current environment.
 
 Within the build.yml file, we define two environment variables of the same name. One is tailored for use in the GitHub Actions environment, while the other is for the Azure resource environment.
 
-For local development purposes, you can establish an environment variable called **"APPSETTING_CONNECTION_STRING"** on your computer. This serves as an alternative to directly interacting with the appsettings.json file, with the stipulation that its contents are kept private and not uploaded to any public repositories.
+For local development purposes, you can establish an environment variable called `APPSETTING_CONNECTION_STRING` on your computer. This serves as an alternative to directly interacting with the `appsettings.json` file, with the stipulation that its contents are kept private and not uploaded to any public repositories.
 
 ### Deploying using this [repository](https://github.com/zetTtai/CleanArchitecturePSQL)
 
