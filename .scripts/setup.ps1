@@ -183,7 +183,7 @@ function SetEnvironmentVariablesAndSecrets {
   
   gh variable set AZURE_CLIENT_ID --body "$appId" --env $environmentName --repo $repoUrl
   gh variable set AZURE_RESOURCE_GROUP_NAME --body "$ProjectName$environmentAbbr" --env $environmentName --repo $repoUrl
-  gh secret set CONNECTION_STRING --body "$connectionString" --env $environmentName --repo $repoUrl
+  gh secret set SUPABASE_CONNECTION_STRING --body "$connectionString" --env $environmentName --repo $repoUrl
 }
 
 SetVariables
