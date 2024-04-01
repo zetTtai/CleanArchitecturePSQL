@@ -425,7 +425,7 @@ For local development purposes, you can establish an environment variable called
 
 To test this template, modify the `.scripts\environments.json` and `src\Web\appsettings.json` files, as they contain placeholder connection strings that will prevent successful deployment.
 
-After making the necessary adjustments to these files, proceed by following the instructions in the Setup Script for Supabase to deploy the project.
+After making the necessary adjustments to these files, proceed by following the instructions in the [Setup Script for Supabase](#setup-script-for-supabase) to deploy the project.
 
 
 
