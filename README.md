@@ -360,9 +360,9 @@ With the database connection established, you can proceed to generate Entity Fra
 
 The `setup.ps1` script in the [repository]() is tailored for setting up the project with Supabase. To use this script:
 
-1. Modify `.azure` folder with the one that can be found in this [repository](), This folder contains a modified version of **main.bicep** from the original template that is used to create an AppServices (F1, free tier) in Azure for each environment.
-2. Modify `.scripts` folder with the one that can be found in this [repository](). This folder contians a modified version of **setup.ps1** from the original template.
-3. Modify `.github` folder with the one that can be found in this [repository](). This folder contians a modified version of **deploy.yml** from the original template.
+1. Modify `.azure` folder with the one that can be found in this [repository](https://github.com/zetTtai/CleanArchitecturePSQL/tree/main/.azure/bicep), This folder contains a modified version of **main.bicep** from the original template that is used to create an AppServices (F1, free tier) in Azure for each environment.
+2. Modify `.scripts` folder with the one that can be found in this [repository](https://github.com/zetTtai/CleanArchitecturePSQL/tree/main/.scripts). This folder contians a modified version of **setup.ps1** from the original template.
+3. Modify `.github` folder with the one that can be found in this [repository](https://github.com/zetTtai/CleanArchitecturePSQL/tree/main/.github). This folder contians a modified version of **deploy.yml** from the original template.
 4. Modify `.scripts\environments.json` with your connection strings for different environments:
 
 ```json
@@ -421,7 +421,7 @@ Within the build.yml file, we define two environment variables of the same name.
 
 For local development purposes, you can establish an environment variable called **"APPSETTING_CONNECTION_STRING"** on your computer. This serves as an alternative to directly interacting with the appsettings.json file, with the stipulation that its contents are kept private and not uploaded to any public repositories.
 
-### Deploying using this [repository]()
+### Deploying using this [repository](https://github.com/zetTtai/CleanArchitecturePSQL)
 
 To test this template, modify the `.scripts\environments.json` and `src\Web\appsettings.json` files, as they contain placeholder connection strings that will prevent successful deployment.
 
